@@ -1,0 +1,21 @@
+######################
+## Managed by Puppet
+######################
+
+define host{
+        name                            <%=@name%>    ; The name of this host template
+        notifications_enabled           <%=@notification_enabled%>       ; Host notifications are enabled
+        event_handler_enabled           <%=@event_handler_enabled%>       ; Host event handler is enabled
+        flap_detection_enabled          <%=@flap_detection_enabled%>       ; Flap detection is enabled
+        failure_prediction_enabled      <%=@failure_prediction_enabled%>       ; Failure prediction is enabled
+        process_perf_data               <%=@process_perf_data%>       ; Process performance data
+        retain_status_information       <%=@retain_status_information%>       ; Retain status information across program restarts
+        retain_nonstatus_information    <%=@retain_nonstatus_information%>       ; Retain non-status information across program restarts
+                check_command                   <%=@check_command%>
+                max_check_attempts             	<%=@max_check_attempts%>
+                notification_interval           <%=@notification_inteval%>
+                notification_period             <%=@notification_period%>
+                notification_options            <%=@notification_options%>
+                contact_groups                  <%=@contact_groups%>
+	register                        <%=@register%>       ; DONT REGISTER THIS DEFINITION - ITS NOT A REAL HOST, JUST A TEMPLATE!
+}
